@@ -1,0 +1,268 @@
+*:focus {
+  outline: none !important;
+}
+
+* {
+  color: rgb(241, 233, 217); 
+  border: 0 !important;
+}
+
+.App {
+  text-align: center;
+}
+
+.App-header {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#title {
+  width: 55vw;
+  word-wrap: break-word;
+  font-weight: 500;
+}
+
+.MuiInputLabel-formControl{
+  font-size: large !important;
+}
+#errorMsg {
+  color: #920000;
+  font-size: 20px;
+  user-select: none;
+}
+#dataTable {
+  margin-top: 50px;
+  max-width: 80vw;
+  width: 980px;
+  height: 386px;
+}
+
+.avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+}
+
+#breed-name {
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 50px;
+  width: 80%;
+}
+
+#altName {
+  text-align: center;
+  margin: 0 auto;
+  width: 50%;
+  word-wrap: break-word;
+  color: #d6d6d6;
+}
+
+.MuiInputBase-input{
+    color:#fff2f2 !important;
+}
+
+#container {
+  max-width: 50vw;
+  min-width: 550px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+}
+
+#photo-wrap {
+  margin: 0 auto;
+  margin-top: 30px;
+  justify-content: center;
+  width: 300px;
+  height: auto;
+}
+
+#photo {
+  width: 100%;
+}
+
+.content {
+  width: 75%;
+  word-wrap:break-word ;
+  margin: 0 auto;
+}
+
+#reference {
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.Button {
+  width: 200px;
+  margin: 5px auto !important; 
+}
+
+.MuiDataGrid-selectedRowCount {
+  display: none !important;
+}
+
+.MuiDataGrid-columnHeaderDraggableContainer, .MuiDataGrid-columnHeaderTitleContainer{
+  outline: 0 !important;
+}
+
+.MuiDataGrid-row:hover {
+  cursor: pointer;
+}
+
+.MuiDataGrid-columnHeader:focus-within{
+  outline: none !important;
+}
+
+.animated-bg {
+    background: linear-gradient(135deg, #62a392, #385bc8);
+    background-size: 600% 600%;
+    -webkit-animation: AnimationName 10s ease infinite;
+    -moz-animation: AnimationName 10s ease infinite;
+    -o-animation: AnimationName 10s ease infinite;
+    animation: AnimationName 10s ease infinite;
+}
+
+.animated-bg-sub {
+    background: linear-gradient(85deg, #1d71a8, #7cad0a);
+    background-size: 600% 600%;
+    -webkit-animation: AnimationName 15s ease infinite;
+    -moz-animation: AnimationName 15s ease infinite;
+    -o-animation: AnimationName 15s ease infinite;
+    animation: AnimationName 15s ease infinite;
+}
+
+@-webkit-keyframes AnimationName {
+    0%{background-position:38% 0%}
+    50%{background-position:63% 100%}
+    100%{background-position:38% 0%}
+}
+
+@-moz-keyframes AnimationName {
+    0%{background-position:38% 0%}
+    50%{background-position:63% 100%}
+    100%{background-position:38% 0%}
+}
+@-o-keyframes AnimationName {
+    0%{background-position:38% 0%}
+    50%{background-position:63% 100%}
+    100%{background-position:38% 0%}
+}
+@keyframes AnimationName {
+    0%{background-position:38% 0%}
+    50%{background-position:63% 100%}
+    100%{background-position:38% 0%}
+}
+
+.MuiPaper-root {
+  background-color: darkslategrey !important;
+}
+
+.MuiDataGrid-footerContainer {
+  justify-content: end !important;
+}
+
+.MuiFormControl-root {
+  width: 460px !important;
+}
+
+.MuiInput-root  {
+  width: inherit !important;
+  font-size: 24px !important;
+}
+
+.MuiFormLabel-root {
+  font-size: 36px !important;
+  color: rgb(241, 233, 217) !important;
+}
+
+.MuiFormLabel-root::before {
+  text-align: center !important;
+  font-size: 36px !important;
+  color: rgb(241, 233, 217) !important;
+}
+
+.MuiFormLabel-root.Mui-focused::before {
+  color: rgb(182, 181, 181) !important;
+}
+
+.MuiFormHelperText-root::before {
+  content: 'You are here to know more about cats, right?' !important;;
+  color:   rgb(255 255 255 / 64%) !important;
+  font-size: 1em !important;
+  user-select: none !important;
+}
+
+.MuiFormHelperText-root.Mui-focused::before {
+  content: 'p.s. Input must be at least 3 characters' !important;;
+  color:   rgba(255, 255, 255, 0.644) !important;
+  font-size: 1em !important;
+  user-select: none !important;
+}
+
+.MuiFormHelperText-root {
+  font-size: 1.2em !important;
+  user-select: none !important;
+}
+
+#breedSearch {
+  text-align: center !important;
+}
+
+#breedSearch_label ~ .Mui-focused {
+  color: black !important;
+}
+
+label + .MuiInput-formControl {
+  margin-top: 48px !important;
+  margin-bottom: 14px !important;
+}
+
+.MuiInput-underline:hover:not(.Mui-disabled):before, .MuiInput-underline:after, .MuiInput-underline:before{
+  border-bottom: unset !important;
+}
+
+.MuiInputBase-input:hover {
+  cursor: pointer !important;
+}
+
+.jumping-dots span {
+  position: relative;
+  bottom: 0px;
+  -webkit-animation: jump 1500ms infinite;
+  animation: jump 2s infinite;
+}
+.jumping-dots .dot-1{
+  -webkit-animation-delay: 200ms;
+  animation-delay: 200ms;
+}
+.jumping-dots .dot-2{
+  -webkit-animation-delay: 400ms;
+  animation-delay: 400ms;
+}
+.jumping-dots .dot-3{
+  -webkit-animation-delay: 600ms;
+  animation-delay: 600ms;
+}
+
+@-webkit-keyframes jump {
+  0%   {bottom: 0px;}
+  20%  {bottom: 5px;}
+  40%  {bottom: 0px;}
+}
+
+@keyframes jump {
+  0%   {bottom: 0px;}
+  20%  {bottom: 5px;}
+  40%  {bottom: 0px;}
+}
