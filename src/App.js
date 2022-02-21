@@ -7,6 +7,7 @@ import { TextField } from "@material-ui/core";
 import Modal from "@mui/material/Modal";
 import CircularProgress from "@mui/material/CircularProgress";
 import Button from "@mui/material/Button";
+import Typing from './Typing';
 const _ = require("lodash");
 function App() {
   axios.create({
@@ -122,6 +123,9 @@ function App() {
   return (
     <div className='App animated-bg'>
       <header className='App-header'>
+        <div className="typewriter">
+          <h1>Here is the cat library!</h1>
+        </div>
         <TextField
           data-testid='search'
           id='breedSearch'
@@ -129,20 +133,9 @@ function App() {
           onBlur={onBlur}
           style={{ display: showData.length > 0 ? "none" : "block" }}
           label={
-            !focused
-              ? "Click me to start!"
-              : (() => {
-                  return (
-                    <div>
-                      Typing
-                      <span className='jumping-dots'>
-                        <span className='dot-1'>.</span>
-                        <span className='dot-2'>.</span>
-                        <span className='dot-3'>.</span>
-                      </span>{" "}
-                    </div>
-                  );
-                })()
+            focused
+              ? (() => Typing())()
+              : 'Enter'
           }
           helperText=' '
           placeholder='ex. Abyssinian'

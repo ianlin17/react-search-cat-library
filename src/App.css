@@ -184,6 +184,8 @@
 .MuiFormLabel-root {
   font-size: 36px !important;
   color: rgb(241, 233, 217) !important;
+  width: 100% !important;
+  text-align: center !important;
 }
 
 .MuiFormLabel-root::before {
@@ -197,14 +199,14 @@
 }
 
 .MuiFormHelperText-root::before {
-  content: 'You are here to know more about cats, right?' !important;;
+  content: 'A good place to hang around!' !important;
   color:   rgb(255 255 255 / 64%) !important;
   font-size: 1em !important;
   user-select: none !important;
 }
 
 .MuiFormHelperText-root.Mui-focused::before {
-  content: 'p.s. Input must be at least 3 characters' !important;;
+  content: 'p.s. Input must be at least 3 characters' !important;
   color:   rgba(255, 255, 255, 0.644) !important;
   font-size: 1em !important;
   user-select: none !important;
@@ -213,6 +215,7 @@
 .MuiFormHelperText-root {
   font-size: 1.2em !important;
   user-select: none !important;
+  text-align: center !important;
 }
 
 #breedSearch {
@@ -236,33 +239,28 @@ label + .MuiInput-formControl {
   cursor: pointer !important;
 }
 
-.jumping-dots span {
-  position: relative;
-  bottom: 0px;
-  -webkit-animation: jump 1500ms infinite;
-  animation: jump 2s infinite;
-}
-.jumping-dots .dot-1{
-  -webkit-animation-delay: 200ms;
-  animation-delay: 200ms;
-}
-.jumping-dots .dot-2{
-  -webkit-animation-delay: 400ms;
-  animation-delay: 400ms;
-}
-.jumping-dots .dot-3{
-  -webkit-animation-delay: 600ms;
-  animation-delay: 600ms;
+.typewriter h1 {
+  color: #fff;
+  font-family: monospace;
+  overflow: hidden;
+  border-right: .15em solid orange; 
+  white-space: nowrap;
+  margin: 0 auto;
+  margin-bottom: 80px;
+  letter-spacing: .15em;
+  animation: 
+    typing 3.5s steps(30, end),
+    blink-caret .5s step-end infinite;
 }
 
-@-webkit-keyframes jump {
-  0%   {bottom: 0px;}
-  20%  {bottom: 5px;}
-  40%  {bottom: 0px;}
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
 }
 
-@keyframes jump {
-  0%   {bottom: 0px;}
-  20%  {bottom: 5px;}
-  40%  {bottom: 0px;}
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: rgb(230, 110, 12) }
 }
