@@ -1,26 +1,28 @@
 import { render, screen, fireEvent } from '@testing-library/react';
+const axios = require('axios');
 import App from './App';
-import GetData from './test/testdata';
-import HandleMissingData from './test/handleMissing';
-import { mockComponent } from 'react-dom/test-utils';
-beforeEach(() => {
-  render(<App />);
-});
 
-test('render page', () => {
-  const linkElement = screen.getByLabelText('Click me to start!');
+test('render page', async () => {
+  const page = await render(<App />);
+  const linkElement = page.getByLabelText('Click me to start!');
   expect(linkElement).toBeInTheDocument();
 });
 
-// test('error message show', () => {
-//   const input = screen.getByTestId('search');
-//   input.value = 'qqqq';
-//   fireEvent.change(input);
-//   jest.fn(() => jest.setTimeout(() => {}), 1500);
-//   mock
-//   const errorMessage = screen.getByTestId('errorMsg');
-//   expect(errorMessage.value).toBe('No data found with the input: qqqq');
-// });
+test('error message show', async () => {
+  const page = await render(<App />);
+  const input = page.getByLabelText('Click me to start!');
+  await new Promise((r) => setTimeout(r, 500));
+  fireEvent(
+    input, new MouseEvent('click', {
+      bubbles: true,
+      cancelable: true,
+    }),
+  );
+  await new Promise((r) => setTimeout(r, 500));
+  const inputt = screen.findByPlaceholderText('ex. Abyssinian')
+  const typeingWord = screen.findByDisplayValue(/Typing/i);
+  expect(typeingWord).toBeTruthy();
+});
 
 // test('check data', () => {
 //   const rawData = GetData();

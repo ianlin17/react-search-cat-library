@@ -208,4 +208,4 @@ function GetData() {
   ];
 }
 
-export default GetData
+module.exports = GetData;
