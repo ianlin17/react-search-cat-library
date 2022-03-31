@@ -121,7 +121,7 @@ function App() {
   };
 
   return (
-    <div className='App animated-bg'>
+    <div className='App animated-bg-sub'>
       <header className='App-header'>
         <div className="typewriter">
           <h1>Here is the cat library!</h1>
